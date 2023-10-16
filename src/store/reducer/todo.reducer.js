@@ -4,11 +4,8 @@ const initialstate = {
 
 
 export const TodoReducer = (state = initialstate, action) => {
-   switch (key) {
-      case value:
-         
-
-         break;
+   switch (action.type) {
+      
       default:
          return state;   
    }
