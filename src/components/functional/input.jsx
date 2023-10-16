@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 
 
 export default function Input() {
+
+  const dispatch = useDispatch();
   let [todo, setTodo] = useState(' ');
 
   const inputChange = (event) =>{
@@ -10,11 +13,13 @@ export default function Input() {
 
   const submit = (event) =>{
     event.preventDefault();
-
-    console.log(todo);
+    
+    dispatch({
+        type:"ADD_TODO",
+        payload: todo
+    })
 
   }
-
   return (
     <form className="row" onSubmit={submit}>
       <div className="col-10">
