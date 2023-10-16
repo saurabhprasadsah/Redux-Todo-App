@@ -5,10 +5,9 @@ import List from './List'
 
 export default function App() {
   return (
-    <div>
+    <div className='container mt-4'>
         <Input />
-        <List/>
-      
+        <List />
     </div>
   )
 }
