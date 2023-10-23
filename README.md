@@ -6,5 +6,4 @@
 
 ## https://github.com/reduxjs/redux-toolkit
 
-
-## Saga function
+## Saga Function
