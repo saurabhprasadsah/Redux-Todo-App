@@ -8,6 +8,7 @@
 
 # $ npm install redux-saga
 
+# class usercomponent
 class UserComponent extends React.Component {
   ...
   onSomeButtonClicked() {
