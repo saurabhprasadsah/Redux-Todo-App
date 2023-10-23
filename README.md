@@ -5,3 +5,5 @@
 ## https://github.com/reduxjs/redux-toolkit
 
 ## Saga Function
+
+# $ npm install redux-saga
