@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 
-
-
-
 export default function Input() {
   const dispatch = useDispatch();
   let [todo, setTodo] = useState(' ');
