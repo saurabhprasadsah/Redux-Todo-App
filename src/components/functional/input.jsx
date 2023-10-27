@@ -8,6 +8,8 @@ export default function Input() {
 
   const inputChange = (event) =>{
     setTodo(event.target.value)
+
+
   }
 
   const submit = (event) =>{
@@ -16,6 +18,7 @@ export default function Input() {
         type:"ADD_TODO",
         payload: todo
     })
+     setTodo('');
 
   }
 
@@ -31,7 +34,7 @@ export default function Input() {
       </div>
 
       <div className="col-2">
-        
+
         <button type="submit" className="btn btn-primary mb-3">Add</button>
       </div>
     </form>
