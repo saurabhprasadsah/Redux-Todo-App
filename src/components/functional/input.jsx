@@ -5,6 +5,8 @@ export default function Input() {
   const dispatch = useDispatch();
 
   let [todo, setTodo] = useState(' ');
+  let [error, setError] = useState(false);
+
 
   const inputChange = (event) =>{
     setTodo(event.target.value)
@@ -14,11 +16,22 @@ export default function Input() {
 
   const submit = (event) =>{
     event.preventDefault();
-    dispatch({
+
+    if(todo.length > 0){
+      dispatch({
         type:"ADD_TODO",
         payload: todo
-    })
-     setTodo('');
+
+      })
+      setTodo('');
+
+    } else{
+
+
+    }
+
+
+
 
   }
 
@@ -31,6 +44,11 @@ export default function Input() {
          placeholder="Enter Todo"
          value={todo}
          onChange={inputChange}/>
+
+           {
+              error &&  <p className='text-danger'>Please enter todo</p>
+           }
+
       </div>
 
       <div className="col-2">
