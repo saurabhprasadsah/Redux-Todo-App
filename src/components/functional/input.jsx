@@ -29,8 +29,9 @@ export default function Input() {
          value={todo}
          onChange={inputChange}/>
       </div>
-      
+
       <div className="col-2">
+        
         <button type="submit" className="btn btn-primary mb-3">Add</button>
       </div>
     </form>

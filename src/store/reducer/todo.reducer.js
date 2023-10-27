@@ -3,7 +3,6 @@ const initialstate = {
    todos: ['breakfast', 'Lunch', 'dinner']
 }
 
-
 export const TodoReducer = (state = initialstate, action) => {
    console.log(action);
    switch (action.type) {
