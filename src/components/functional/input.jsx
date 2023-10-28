@@ -10,11 +10,10 @@ export default function Input() {
 
   const inputChange = (event) =>{
     setTodo(event.target.value)
-
-
   }
 
   const submit = (event) =>{
+
     event.preventDefault();
 
     if(todo.length > 0){
@@ -31,8 +30,6 @@ export default function Input() {
     }
 
 
-
-
   }
 
 
@@ -46,7 +43,7 @@ export default function Input() {
          onChange={inputChange}/>
 
            {
-              error &&  <p className='text-danger'>Please enter todo</p>
+              error &&  <p className='text-danger'> Please enter todo </p>
            }
 
       </div>
