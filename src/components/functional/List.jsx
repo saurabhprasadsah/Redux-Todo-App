@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 
 export default function List() {
   const todos = useSelector(state => state.todos);
+  
   return (
     <ul className="list-group">
       {
@@ -12,7 +13,7 @@ export default function List() {
         )):<li className='list-group-item'> No todo </li>
 
       }
-      
+
     </ul>
   )
 }
