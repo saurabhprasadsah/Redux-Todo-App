@@ -11,9 +11,7 @@ export const TodoReducer = (state = initialstate, action) => {
          ...state,
          todos:array
       }
-
       default:
          return state;   
    }
-
 }
