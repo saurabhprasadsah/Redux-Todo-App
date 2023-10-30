@@ -10,6 +10,7 @@ export const TodoReducer = (state = initialstate, action) => {
       return{
          ...state,
          todos:array
+         
       }
       default:
          return state;   
