@@ -9,11 +9,10 @@ export default function List() {
     <ul className="list-group">
 
       {
-
         todos.length > 0 ? todos.map((todo, index) => (
           <li className='list-group-item' key={index}>{todo}</li>
-          
-        )):<li className='list-group-item'> No todo </li>
+  
+        )):<li className='list-group-item'> No Todo in List </li>
 
       }
 
