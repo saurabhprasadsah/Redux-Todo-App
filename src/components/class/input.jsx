@@ -9,8 +9,6 @@ class Input extends Component {
          }
     }
 
-
-
     onInputChange =(event) =>{
         this.setState({
             todo: event.target.value
@@ -25,7 +23,6 @@ class Input extends Component {
     componentDidMount(){
         console.log(this.props);
     }
-
 
     render() {
         return (
@@ -46,7 +43,6 @@ class Input extends Component {
 }
 
 
-
 const mapStateToProps = (state) =>{
     return {
 
@@ -58,7 +54,6 @@ const mapDispatchToProps = (dispatch) => {
         addTodo :(todo) => dispatch({type: "ADD_TODO", payload: todo})
     }
 }
-
 
 
 export default connect(mapStateToProps,mapDispatchToProps)(Input);
