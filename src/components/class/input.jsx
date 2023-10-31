@@ -84,14 +84,12 @@ class Input extends Component {
     }
 }
 
-
 const mapStateToProps = (state) => {
     return {
         editData: state.editData
 
     }
 }
-
 
 const mapDispatchToProps = (dispatch) => {
     return {
