@@ -43,9 +43,6 @@ class Input extends Component {
                 error:true
             })
         }
-
-
-       
     }
 
     componentDidMount() {
@@ -53,7 +50,6 @@ class Input extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-
         if (prevProps.editData.index !== this.props.editData.index) {
             this.setState({
                 todo: this.props.editData.data
@@ -75,7 +71,9 @@ class Input extends Component {
                         }
                 </div>
                 <div className="col-2">
-                    <button type="submit" className="btn btn-primary mb-3">
+                    <button type="submit"
+                     className="btn btn-primary mb-3"
+                     disabled={this.state.todo.length > 0 ? false: true}>
                             {
                                 this.props.editData.index === '' ? 'Add' : 'update'
                             }
@@ -95,11 +93,9 @@ const mapStateToProps = (state) => {
 }
 
 
-
-
 const mapDispatchToProps = (dispatch) => {
     return {
-        addTodo: (todo) => dispatch({ type: "ADD_TODO", payload: todo }),
+        addTodo: (todo) => dispatch({ type: "ADD_TODO", payload: todo}),
         updateTodo: (index, data) => dispatch({
             type: "UPDATE_TODO", payload: {
                 index: index, data: data
