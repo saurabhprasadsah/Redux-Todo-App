@@ -4,11 +4,12 @@ import { connect } from 'react-redux';
 class Input extends Component {
     constructor() {
          super();
-
          this.state ={
             todo : ''
          }
     }
+
+
 
     onInputChange =(event) =>{
         this.setState({
@@ -18,13 +19,13 @@ class Input extends Component {
 
     submit = (event) =>{
         event.preventDefault()
-
         this.props.addTodo(this.state.todo);
     }
 
     componentDidMount(){
         console.log(this.props);
     }
+
 
     render() {
         return (
