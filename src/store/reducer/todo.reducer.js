@@ -10,8 +10,19 @@ export const TodoReducer = (state = initialstate, action) => {
       return{
          ...state,
          todos:array
-         
+
       }
+
+      case "DELETE_TODO" :
+         let filteredArray = state.todos.filter(todo => todo !==  action.payload)
+      
+         console.log(filteredArray);
+      return{
+         ...state,
+         todos
+      }
+
+
       default:
          return state;   
    }
