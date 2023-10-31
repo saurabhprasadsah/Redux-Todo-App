@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 
  class List extends Component {
     componentDidMount(){
-        // console.log(this.props);
     }
   render() {
     return (
@@ -38,7 +37,7 @@ const mapDispatchToProps = (dispatch) => {
         editTodo :(index,todo) => dispatch({type: "EDIT_TODO",
          payload:{
             index: index,
-            data: data
+            data: todo
         }
         }),
         deleteTodo :(todo) => dispatch({type: "DELETE_TODO", payload: todo})
