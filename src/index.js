@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import App from './components/class/App';
-import App from './components/functional/App';
+import App from './components/class/App';
+// import App from './components/functional/App';
 import { Provider } from 'react-redux';
 import store from './store/store/store';
 
@@ -13,5 +13,7 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+
+
 
 
