@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function Input() {
   const dispatch = useDispatch();
 
-  let [todo, setTodo] = useState(' ');
+  const editData = useSelector(state => state.editData)
+
+
+  let [todo, setTodo] = useState('');
   let [error, setError] = useState(false);
 
 
@@ -29,6 +32,9 @@ export default function Input() {
 
     }
   }
+  useEffect(() =>{
+    setTodo(editData.data)
+  }, [editData.index, editData.data])
 
 
   return (
@@ -47,10 +53,13 @@ export default function Input() {
       </div>
 
       <div className="col-2">
-
         <button type="submit"
           className="btn btn-primary mb-3"
-          disabled={todo.length === 0 ? true : false}>Add</button>
+          disabled={todo.length === 0 ? true : false}>
+            {
+              editData.index === '' ? "Add" : "Update"
+            }
+          </button>
 
       </div>
     </form>

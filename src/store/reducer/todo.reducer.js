@@ -30,14 +30,12 @@ export const TodoReducer = (state = initialstate, action) => {
          todos :[...filteredArray]
       }
       case "EDIT_TODO":
-         console.log(action.payload);
-
-
-
+         // console.log(action.payload);
           return {
             ...state,
             editData: {
-                  index:  action.payload.index
+                  index:  action.payload.index,
+                  data: action.payload.data
             }
 
 
