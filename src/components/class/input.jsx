@@ -55,7 +55,6 @@ const mapStateToProps = (state) =>{
 const mapDispatchToProps = (dispatch) => {
     return{
         addTodo :(todo) => dispatch({type: "ADD_TODO", payload: todo})
-
     }
 }
 
