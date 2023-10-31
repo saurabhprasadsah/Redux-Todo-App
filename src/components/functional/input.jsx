@@ -20,12 +20,27 @@ export default function Input() {
     event.preventDefault();
 
     if(todo.length > 0) {
-      dispatch({
-        type: "ADD_TODO",
-        payload: todo
 
-      })
-      setTodo('');
+      if(editData.index !== ''){
+        dispatch({
+          type: "UPDATE_TODO",
+          payload:{
+            index:editData.index,
+            data: todo
+          }
+        })
+  
+      }else{
+        dispatch({
+          type: "ADD_TODO",
+          payload: todo
+  
+        });
+  
+
+      }
+
+        setTodo('');
 
     } else {
       setError(true);

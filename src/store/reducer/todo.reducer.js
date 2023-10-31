@@ -37,9 +37,20 @@ export const TodoReducer = (state = initialstate, action) => {
                   index:  action.payload.index,
                   data: action.payload.data
             }
-
-
           }
+
+      case "UPDATE_TODO":
+         state.todos.splice(action.payload.index,1, action.payload.data)
+
+         return {
+            ...state,
+            todos: [...state.todos],
+            editData: {
+               index:'',
+               data: ''
+            }
+         }
+    
 
       default:
          return state;   
