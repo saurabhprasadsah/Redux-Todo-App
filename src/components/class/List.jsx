@@ -2,11 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
  class List extends Component {
-
     componentDidMount(){
         // console.log(this.props);
     }
-
   render() {
     return (
         <ul className="list-group">
@@ -19,7 +17,6 @@ import { connect } from 'react-redux'
                         <button className='btn btn-danger'  onClick={() => this.props.deleteTodo(todo)}>Delete</button>
                       </div>
                         </li>
-
                 )): <li className="list-group-item">No todo </li>
 
             }
