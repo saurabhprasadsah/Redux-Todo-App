@@ -15,7 +15,7 @@ import { connect } from 'react-redux'
                     <li className="list-group-item d-flex justify-content-between" key={index}>
                       <div>{todo}</div>
                       <div>
-                        <button className='btn btn-warning mx-2'>Edit</button>
+                        <button className='btn btn-warning mx-2' onClick={() => this.props.editTodo(index, todo)}>Edit</button>
                         <button className='btn btn-danger'  onClick={() => this.props.deleteTodo(todo)}>Delete</button>
                       </div>
                         </li>
@@ -36,6 +36,12 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = (dispatch) => {
     return{
+        editTodo :(index,todo) => dispatch({type: "EDIT_TODO",
+         payload:{
+            index: index,
+            data: data
+        }
+        }),
         deleteTodo :(todo) => dispatch({type: "DELETE_TODO", payload: todo})
     }
 }
