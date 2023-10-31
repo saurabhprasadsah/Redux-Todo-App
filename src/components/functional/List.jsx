@@ -14,8 +14,17 @@ export default function List() {
           <li className='list-group-item d-flex justify-content-between' key={index}>
            <div>{todo}</div>
            <div>  
-            <button  className='btn btn-danger'  onClick={()=> dispatch({
 
+            <button className='btn btn-warning mx-2' onClick={()=> dispatch({
+                type: "EDIT_TODO",
+                payload:{
+                  index: index,
+                  data: todo
+                }
+
+            })}>Edit</button>
+
+            <button  className='btn btn-danger'  onClick={()=> dispatch({
               type:"DELETE_TODO",
               payload: todo
 

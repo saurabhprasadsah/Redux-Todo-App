@@ -1,6 +1,13 @@
 
 const initialstate = {
-   todos: ['breakfast', 'Lunch', 'dinner']
+   todos: ['breakfast', 'Lunch', 'dinner'],
+
+   editData: {
+      index : '',
+      data:''
+      }
+
+
 }
 export const TodoReducer = (state = initialstate, action) => {
    console.log(action);
