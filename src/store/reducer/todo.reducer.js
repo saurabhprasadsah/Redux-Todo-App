@@ -29,7 +29,19 @@ export const TodoReducer = (state = initialstate, action) => {
          ...state,
          todos :[...filteredArray]
       }
+      case "EDIT_TODO":
+         console.log(action.payload);
 
+
+
+          return {
+            ...state,
+            editData: {
+                  index:  action.payload.index
+            }
+
+
+          }
 
       default:
          return state;   
