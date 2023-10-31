@@ -17,9 +17,10 @@ export const TodoReducer = (state = initialstate, action) => {
          let filteredArray = state.todos.filter(todo => todo !==  action.payload)
       
          console.log(filteredArray);
+          
       return{
          ...state,
-         todos
+         todos :[...filteredArray]
       }
 
 
